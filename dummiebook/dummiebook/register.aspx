@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-  <meta charset="utf-8" />
+<html>
+
+<head>
+    <meta charset="utf-8" />
 	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
 	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,6 +22,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/css/nucleo-icons.css" rel="stylesheet">
+
 </head>
 <body class="full-screen register">
     <nav class="navbar fixed-top navbar-transparent">
@@ -32,7 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="btn btn-round btn-info" href="register.aspx"></i>Registrar</a>
+                        <a class="btn btn-round btn-info" href="Default.aspx"></i>Iniciar Sesión</a>
                     </li>
                 </ul>
         </div>
@@ -45,14 +47,17 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 col-sm-10 mt-5 mt-sm-0">
                             <div class="card card-register">
-                                <h3 class="card-title text-center mb-4">¡Inicia sesión!</h3>
+                                <h3 class="card-title text-center mb-4">¡Regístrate!</h3>
 
-                                <form  class="register-form">
-                                    <input type="text" class="form-control mb-4" placeholder="Rut" name="rux" id="rux">
+                                <form action="sesion_reg.php" method="POST" class="register-form">
+                                    <input type="text" class="form-control" placeholder="Rut" name="run">
+                                   <input type="text" class="form-control" placeholder="Nombre" name="name">
+                                   <input type="text" class="form-control" placeholder="apellido paterno" name="app">
+                                   <input type="text" class="form-control" placeholder="apellido materno" name="apm">
+                                    <input type="password" class="form-control" placeholder="Contraseña" name="passta">
 
-                                    <input type="password" class="form-control" placeholder="Contraseña" name="passi" id="passi">
 
-                                    <button class="btn btn-block btn-round btn-warning" id="btnentrar">Entrar</button>
+                                    <button class="btn btn-block btn-round btn-warning">Registrar</button>
                                 </form>
                             </div>
                         </div>
@@ -68,4 +73,6 @@
 <script src="assets/js/tether.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/paper-kit.js?v=2.0.1"></script>
+
 </html>
+
